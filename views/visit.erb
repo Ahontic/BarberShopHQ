@@ -22,11 +22,7 @@
     <label>Выберите вашего мастера</label>
   <select name="barber" class="form-control">
         
-     <!--  <option <%= @barber == 'Walter White' ? 'selected' : '' %> value="Walter White">Walter White</option>
-    <option <%= @barber == 'Jessie Pinkman' ? 'selected' : '' %> value="Jessie Pinkman">Jessie Pinkman</option>
-    <option <%= @barber == 'Gus Fring' ? 'selected' : '' %> value="Gus Fring">Gus Fring</option> -->
-
-    <% @barbers.each do |item| %>
+     <% @barbers.each do |item| %>
     <option <%= @barber == item['name'] ? 'selected' : '' %>><%= item['name'] %></option>
     <% end %>
 

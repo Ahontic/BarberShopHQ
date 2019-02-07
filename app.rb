@@ -32,6 +32,15 @@ post '/visit' do
 		@barber		= params[:barber]
 		@color		= params[:color]
 
+		# Сохранение в БД ламерский способ
+
+client = Client.new
+client.name      = @username
+client.phone     = @phone
+client.datestamp = @datetime
+client.barber    = @barber
+client.color     = @color
+client.save
 		
 		erb "<h2> Спасибо, Вы записались!</h2>"
 		
